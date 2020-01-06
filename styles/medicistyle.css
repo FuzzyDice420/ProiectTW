@@ -1,0 +1,40 @@
+.mid-container {
+	padding: 4em;
+	background: #00C2FF;
+	border-radius: 40px;
+}
+
+.mid-container * {
+	margin: auto;
+	width: 80%;
+}
+
+.medic-pic {
+	position: relative;
+    width:  30%;
+    height: 30%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+	border-radius: 10%;
+}
+
+.doctor-box {
+	text-align: center;
+	padding: 1em;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+	border-radius: 10px;
+	width: 40%;
+}
+
+.mid-container *:not(:last-child) {
+	margin-bottom: 2em;
+}
+
+.button {
+	background: #00CC80;
+	width: 20%;
+	border: none;
+	border-radius: 10px;
+}
