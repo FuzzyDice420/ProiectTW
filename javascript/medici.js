@@ -1,3 +1,5 @@
+
+
 //dynamically adding audio
 function addSound() {
     var footer = document.getElementsByClassName("footer");
@@ -11,3 +13,15 @@ function addSound() {
 }
 
 addSound();
+
+var btn = document.createElement("button");
+btn.innerHTML = "Sterge footerul!"
+
+document.body.appendChild(btn);
+
+function deleteFooter() {
+    var footer = document.getElementsByClassName("footer");
+    document.body.removeChild(footer[0]);
+}
+
+btn.onclick = deleteFooter();
