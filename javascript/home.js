@@ -1,3 +1,5 @@
+
+
 function openForm() {
     document.getElementById("loginPopup").style.display = "block";
 }
@@ -126,5 +128,31 @@ console.log(errorMessage);
 /*var element = document.querySelector(".form-container li:nth-child(1)");
 element.classList.remove("invalid");
 element.classList.add("valid");*/
+
+fetch("http://api.openweathermap.org/data/2.5/weather?q=Bucharest&APPID=9a87a523974421490a47db1da3292638")
+.then(function(response) {
+    var fetchData = null;
+    response.json().then(function(data) {
+        console.log("data fetched successfuly ", data);
+        fetchData = data;
+        var para = document.createElement("p");
+        para.innerHTML = "Vremea in Bucuresti:"
+        var para2 = document.createElement("p");
+        para2.innerHTML = "Temperatura: " + fetchData.main[0] + "Feels like: " + fetchData.main[1] + "Viteza vant: " + fetchData.wind[0];
+        document.getElementsByClassName("footer")[0].appendChild(para);
+        document.getElementsByClassName("footer")[0].appendChild(para2);
+    });
+})
+.catch(function(error) {
+    console.log("Eroarea este ", error);
+})
+
+/*var loginBtn = document.getElementsByClassName("btn")[0];
+loginBtn.onclick = function () {
+    if (errorMessage) {
+        Swal(errorMessage);
+    }
+}*/
+
 
 
